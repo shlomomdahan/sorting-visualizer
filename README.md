@@ -1,3 +1,16 @@
+# Sorting Visualizer
+
+This project is a visual representation of various sorting algorithms in action, built using Next.js/React. It's designed to help users understand how different sorting algorithms organize data, including Bubble, Quick, Insertion, Merge, and Selection sorts. Users can visualize the process of sorting arrays of numbers in real-time and observe how each algorithm approaches the task of sorting.
+
+## Features
+
+- **Visualize Algorithms**: Watch Bubble, Quick, Insertion, Merge, and Selection algorithms sort arrays of numbers.
+- **Compare Algorithms**: Easily switch between algorithms to compare performance and efficiency on the fly.
+
+![Sorting Visualizer Demo](sort.gif)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
