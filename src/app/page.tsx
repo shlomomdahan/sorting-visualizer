@@ -48,7 +48,7 @@ export default function Home() {
       <div className="flex h-full justify-center">
         <div
           id="content-container"
-          className="flex max-w-[1020px] w-full flex-col lg:px-0 px-4"
+          className="flex max-w-[1020px] w-full flex-col lg:px-0 px-4 mb-4"
         >
           <div className="h-[66px] relative flex items-center justify-between w-full">
             <h1 className="text-gray-300 text-2xl font-light hidden md:flex">
@@ -77,42 +77,6 @@ export default function Home() {
                 )}
               </button>
             </div>
-            <div className="hidden sm:flex absolute top-[120%] left-0 w-full">
-              <div className="flex w-full text-gray-400 p-4 rounded border border-yellow-100 bg-slate-500 bg-opacity-10 gap-6">
-                <div className="flex flex-col items-start justify-start w-3/4">
-                  <h3 className="text-lg">
-                    {sortingAlgorithmsData[selectedAlgorithm].title}
-                  </h3>
-                  <p className="text-sm text-grey-500 pt-2">
-                    {sortingAlgorithmsData[selectedAlgorithm].description}
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-start justify-start w-1/4 gap-2">
-                  <h3 className="text-lg">Time Complexity</h3>
-                  <div className="flex flex-col gap-2">
-                    <p className="flex w-full text-sm text-gray-500">
-                      <span className="w-28">Worst Case:</span>
-                      <span>
-                        {sortingAlgorithmsData[selectedAlgorithm].worstCase}
-                      </span>
-                    </p>
-                    <p className="flex w-full text-sm text-gray-500">
-                      <span className="w-28">Average Case:</span>
-                      <span>
-                        {sortingAlgorithmsData[selectedAlgorithm].averageCase}
-                      </span>
-                    </p>
-                    <p className="flex w-full text-sm text-gray-500">
-                      <span className="w-28">Best Case:</span>
-                      <span>
-                        {sortingAlgorithmsData[selectedAlgorithm].bestCase}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div className="relative h-[calc(100vh-66px)] w-full">
             <div className="absolute bottom-[32px] w-full mx-auto left-0 right-0 flex justify-center items-end">
@@ -123,6 +87,40 @@ export default function Home() {
                   style={{ height: `${value}px` }}
                 ></div>
               ))}
+            </div>
+          </div>
+
+          <div className="hidden w-full p-6 bg-gradient-to-r from-slate-700 to-slate-800 rounded-lg shadow-lg border border-gray-700 gap-8 sm:flex justify-between text-gray-200">
+            <div className="flex flex-col w-3/4">
+              <h3 className="text-xl font-semibold">
+                {sortingAlgorithmsData[selectedAlgorithm].title}
+              </h3>
+              <p className="text-md text-gray-300 mt-2">
+                {sortingAlgorithmsData[selectedAlgorithm].description}
+              </p>
+            </div>
+            <div className="flex flex-col w-1/4 gap-4">
+              <h3 className="text-xl font-semibold">Time Complexity</h3>
+              <div className="flex flex-col gap-2">
+                <p className="flex w-full text-md text-gray-300">
+                  <span className="font-medium w-32">Worst Case:</span>
+                  <span>
+                    {sortingAlgorithmsData[selectedAlgorithm].worstCase}
+                  </span>
+                </p>
+                <p className="flex w-full text-md text-gray-300">
+                  <span className="font-medium w-32">Average Case:</span>
+                  <span>
+                    {sortingAlgorithmsData[selectedAlgorithm].averageCase}
+                  </span>
+                </p>
+                <p className="flex w-full text-md text-gray-300">
+                  <span className="font-medium w-32">Best Case:</span>
+                  <span>
+                    {sortingAlgorithmsData[selectedAlgorithm].bestCase}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

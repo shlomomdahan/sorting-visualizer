@@ -24,7 +24,7 @@ export function generateSelectionSortAnimationArray(
   if (array.length <= 1) return;
 
   const animations: AnimationArrayType = [];
-  const auxiliaryArray = array.slice();
-  runSelectionSort(auxiliaryArray, animations);
+  const copy = array.slice();
+  runSelectionSort(copy, animations);
   runAnimation(animations);
 }

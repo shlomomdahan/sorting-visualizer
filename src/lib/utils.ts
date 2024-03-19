@@ -1,6 +1,9 @@
 import { generateBubbleSortAnimationArray } from "@/algorithms/bubbleSort";
-import { AnimationArrayType, SortingAlgorithmType } from "./types";
+import { SortingAlgorithmType } from "./types";
 import { generateSelectionSortAnimationArray } from "@/algorithms/selectionSort";
+import { generateMergeSortAnimationArray } from "@/algorithms/mergeSort";
+import { generateQuickSortAnimationArray } from "@/algorithms/quickSort";
+import { generateInsertionSortAnimationArray } from "@/algorithms/insertionSort";
 
 export const MIN_ANIMATION_SPEED = 10;
 export const MAX_ANIMATION_SPEED = 300;
@@ -10,11 +13,11 @@ export function generateRandomNumberFromInterval(min: number, max: number) {
 }
 
 export const algorithmOptions = [
-  { label: "Bubble Sort", value: "bubble" },
-  { label: "Selection Sort", value: "selection" },
-  { label: "Insertion Sort", value: "insertion" },
-  { label: "Merge Sort", value: "merge" },
-  { label: "Quick Sort", value: "quick" },
+  { label: "Bubble", value: "bubble" },
+  { label: "Quick", value: "quick" },
+  { label: "Merge", value: "merge" },
+  { label: "Insertion", value: "insertion" },
+  { label: "Selection", value: "selection" },
 ];
 
 export function generateAnimationArray(
@@ -28,14 +31,14 @@ export function generateAnimationArray(
       generateBubbleSortAnimationArray(isSorting, array, runAnimation);
       break;
     case "quick":
-    //   generateQuickSortAnimationArray(isSorting, array, runAnimation);
-    //   break;
-    // case "merge":
-    //   generateMergeSortAnimationArray(isSorting, array, runAnimation);
-    //   break;
-    // case "insertion":
-    //   generateInsertionSortAnimationArray(isSorting, array, runAnimation);
-    //   break;
+      generateQuickSortAnimationArray(isSorting, array, runAnimation);
+      break;
+    case "merge":
+      generateMergeSortAnimationArray(isSorting, array, runAnimation);
+      break;
+    case "insertion":
+      generateInsertionSortAnimationArray(isSorting, array, runAnimation);
+      break;
     case "selection":
       generateSelectionSortAnimationArray(isSorting, array, runAnimation);
       break;
